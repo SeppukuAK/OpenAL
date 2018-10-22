@@ -1,0 +1,15 @@
+
+# Exes
+*.exe
+*.pdb
+*.ilk
+
+Inter/
+# Exes/
+
+# Otros archivos que he visto que hay que ignorar
+*.sdf
+*.opensdf
+*.log
+*.suo
+*.VC.db
