@@ -13,3 +13,7 @@ Inter/
 *.log
 *.suo
 *.VC.db
+
+#Cache VS 2017
+.vs/
+x64/
