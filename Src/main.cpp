@@ -1,4 +1,5 @@
 ﻿#include "AudioManager.h"
+#include "Scene1.h"
 
 /*
 3 objetos básicos:
@@ -22,58 +23,13 @@ alGen crea tanto buffers como sources
 
 Las llamadas a al() siguen un convenio.
 */
-class Ejercicio1 {
-public:
-	Ejercicio1()
-	{
-
-		// una forma de inventarse un renderizado
-		//ALint time = 0, elapse = 0;
-		//while (!_kbhit()) {
-		//	elapse += clock() - time;
-		//	time += elapse;
-		//	//printf("Elapse: %i time: %i", elapse, time); //salida
-		//	if (elapse > 50) {
-		//		// reseteamos
-		//		elapse = 0;
-		//		// SourcePos[0] += SourceVel[0];
-		//		// SourcePos[1] += SourceVel[1]
-		//		//Es necesario siempre hacer esto para mover un sonido
-		//		SourcePos[2] += SourceVel[2]; // este es el que cambia, la Z
-		//									  // actualizamos la posicion del source
-		//		alSourcefv(Source, AL_POSITION, SourcePos);
-		//	}
-		//}
-
-		//alutSleep(3);//Pausa para escuchar
-
-		//Liberacíon de recursos y salida
-	}
-
-};
-
 
 //
 //class Ejercicio2 {
 //public:
 //	Ejercicio2()
 //	{
-//		//Creación buffer
-//		ALuint Buffer[3];
-//		Buffer[0] = alutCreateBufferFromFile("../../Media/batalla/Gun1.wav");
-//		Buffer[1] = alutCreateBufferFromFile("../../Media/batalla/Gun2.wav");
-//		Buffer[2] = alutCreateBufferFromFile("../../Media/batalla/Battle.wav");
-//
-//		if (alGetError() != AL_NO_ERROR) exit(-1);
-//
-//		//Creación listener
-//		ALfloat ListenerPos[] = { 0.0, 0.0, 0.0 };
-//		ALfloat ListenerVel[] = { 0.0, 0.0, 0.0 };
-//		ALfloat ListenerOri[] = { 0.0, 0.0, -1.0, 0.0, 1.0, 0.0 }; 	// Orientacion, mirando a la pantalla (los primeros 3 elementos son "at", los otros "up"). Todos los valores deben ser 1 o -1
-//																	//							----- at ----- ----- up ----
-//		alListenerfv(AL_POSITION, ListenerPos);
-//		alListenerfv(AL_VELOCITY, ListenerVel);
-//		alListenerfv(AL_ORIENTATION, ListenerOri);
+
 //
 //		//Creación source
 //		ALuint *Source;
@@ -155,6 +111,11 @@ int main() {
 	AudioManager * audioManager;
 	audioManager = AudioManager::GetInstance();
 	
+	Scene1* scene = new Scene1();
+	scene->Init();
+	scene->Loop();
+	delete scene;
+
 	audioManager->ResetInstance();
 
 	return EXIT_SUCCESS;

@@ -1,10 +1,12 @@
 #include "Scene1.h"
 
+#include <conio.h>
+#include "AudioManager.h"
 
 
-Scene1::Scene1() : Scene()
+Scene1::Scene1() 
 {
-	
+
 }
 
 
@@ -14,13 +16,12 @@ Scene1::~Scene1()
 
 void Scene1::Init()
 {
-	AudioManager * audioManager = AudioManager::GetInstance();
+	AudioManager* audioManager = AudioManager::GetInstance();
+
 	//Carga de recursos
 	std::string audioPath[] = { "../../Media/motores/1.wav" };
 	audioManager->LoadAudio(audioPath[0]);
 	audioManager->ShowAudioInfo(audioPath[0]);
-
-	std::vector<AudioSource*> audioSourceActors;
 
 	////Creación listener
 	//ALfloat ListenerPos[] = { 0.0, 0.0, 0.0 };
@@ -33,13 +34,11 @@ void Scene1::Init()
 	//AudioManager::GetInstance()->SetListenerOri(ListenerOri);
 
 	//Sources
-	AudioSource* audioSource = new AudioSource();
+	audioSource = new AudioSource();
 	audioSource->SetAudioClip(audioManager->GetBuffer(audioPath[0]));	//Asocia buffer a source
 
-																		//ALfloat SourcePos[] = { 0.0, 0.0, 0.0 };
-																		//ALfloat SourceVel[] = { 0.0f, 0.0f, 0.1f };
-
-
+	//ALfloat SourcePos[] = { 0.0, 0.0, 0.0 };
+	//ALfloat SourceVel[] = { 0.0f, 0.0f, 0.1f };
 }
 
 void Scene1::Loop()

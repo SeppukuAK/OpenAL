@@ -22,7 +22,6 @@
     <ClCompile Include="..\..\Src\AudioManager.cpp" />
     <ClCompile Include="..\..\Src\AudioSource.cpp" />
     <ClCompile Include="..\..\Src\main.cpp" />
-    <ClCompile Include="..\..\Src\Scene.cpp" />
     <ClCompile Include="..\..\Src\Scene1.cpp" />
     <ClCompile Include="..\..\Src\Scene2.cpp" />
   </ItemGroup>
