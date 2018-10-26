@@ -19,7 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Src\AudioManager.cpp" />
+    <ClCompile Include="..\..\Src\AudioSource.cpp" />
     <ClCompile Include="..\..\Src\main.cpp" />
+    <ClCompile Include="..\..\Src\Scene.cpp" />
+    <ClCompile Include="..\..\Src\Scene1.cpp" />
+    <ClCompile Include="..\..\Src\Scene2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\AudioManager.h" />
+    <ClInclude Include="..\..\Src\AudioSource.h" />
+    <ClInclude Include="..\..\Src\Scene.h" />
+    <ClInclude Include="..\..\Src\Scene1.h" />
+    <ClInclude Include="..\..\Src\Scene2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
